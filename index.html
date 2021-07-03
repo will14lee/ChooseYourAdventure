@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Story</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<p id="fill"></p>
+    <h1>The Story</h1>
+    <p id="demo"></p>
+    <h2>Greetings. </h2>
+    <h3>I am Read </h3>
+    <img id="read" src="https://rpgmaker.net/media/content/games/9902/screenshots/Rene_Comforting.png" height="300px">
+    <img id="readSmile" src="https://rpgmaker.net/media/content/games/9902/screenshots/Rene_Smiling.png" height="300px">
+    <img id="readSmirk" src="https://rpgmaker.net/media/content/games/9902/screenshots/Read_Smiling2.png" height="300px">
+    <hr>
+    <p>What is your name?</p>
+    <p>My name is: <cite class="name"></cite></p>
+        <input id="inName" placeholder="Mara"></input><button id="btnName">Submit</button>
+    <div id="first">
+        <p>So you are <cite class="name"></cite>? It's a pleasure to meet you.</p>
+        <p><cite class="name"></cite>, in a few moments you will wake.</p>
+        <p>When you do you will find yourself in an unfamiliar world.</p>
+        <p>Speaking about it... well it would be most droll.</p>
+        <p>So, why don't you figure it out for yourself?</p>
+        <p>Since I am kind however, I will warn you about this: It's a very dangerous place.</p>
+        <p>The kind that devours those that are unprepared and naïve get eaten up.</p>
+        <p>So... do be most careful. It would be a shame to see your story end so soon.</p>
+    <button id="pBtn">Continue...</button>
+    </div>
+    <div id="choice1">
+        <p id="p1"> You are hungry. Where would you like to go?</p>
+            <div id="firstChoices">
+                <button id="one1" class="choiceButtons">Towards the smoke to my West.</button>
+                <br>
+                <img src="https://i2.wp.com/www.slaphappylarry.com/wp-content/uploads/2019/03/Kubel-Gingerbread-House.jpg?resize=352%2C530&ssl=1" height="200px" width="200px">
+                <br>
+                <button id="one2" class="choiceButtons">To the berry bush directly to my South.</button>
+                <br>
+                <img src="https://image.shutterstock.com/image-photo/ripe-ripening-berries-blackberry-raspberry-260nw-1038296971.jpg", height="200px" width="200px">
+                <br>
+                <button id="one3" class="choiceButtons">To the dark and treacherous woods to my East.</button>
+                <br>
+                <img src="https://images-na.ssl-images-amazon.com/images/I/612BzN2f6rL._AC_SX466_.jpg", height="200px" width="200px">
+                <br>
+                <button id="death1" class="deathBtn">To that poisonous-looking swamp to my North of course!</button>
+                <br>
+                <img src="https://static.wikia.nocookie.net/youtubepoop/images/3/3e/Swamp.png/revision/latest?cb=20150508061628", height="200px" width="200px">
+                <br>
+        </div>
+    </div>
+    <div id="choice2" class="choiceButtons">
+        <p id="flavor2"></p>
+        <p id="p2">Choice2</p>
+        <div id= "secondChoices">
+        <button id="secondBtn" class="choiceButtons">Choice1</button>
+        <br>
+        <img>
+        <br>
+        <button id="thirdBtn" class="choiceButtons">Choice2</button>
+        <br>
+        <img>
+        <br>
+        <button id="death2" class="deathBtn">Wolf kills you</button>
+        <br>
+        <img>
+        <br>
+        <button id="death3" class="deathBtn">Bees murder you</button>
+        <br>
+        <img>
+        <br>
+        </div>
+    </div>
+    <div id="choice3" class="choiceButtons">
+        <p id="flavor3"></p>
+        <p id="p3">Choice3</p>
+        <div id="thirdChoices">
+        <button id="fourthBtn" class="choiceButtons">Choice1</button>
+        <br>
+        <img>
+        <br>
+        <button id="death4" class="deathBtn">Bigger bees murder you</button>
+        <br>
+        <img>
+        <br>
+        <button id="death5" class="deathBtn">Gigantic bees murder you</button>
+        <br>
+        <img>
+        <br>
+        <button id="death6" class="deathBtn">It's too terrible</button>
+        <br>
+        <img>
+        <br>
+        </div>
+    </div>
+    <div id="choice4" class="choiceButtons">
+        <p id="flavor4"></p>
+        <p id="p4">Choice4</p>
+        <div id="fourthChoices">
+        <button id="fifthBtn" class="choiceButtons">Choice1</button>
+        <br>
+        <img>
+        <br>
+        <button id="death7" class="deathBtn">Lemons</button>
+        <br>
+        <img>
+        <br>
+        <button id="death8" class="deathBtn">Limes</button>
+        <br>
+        <img>
+        <br>
+        <button id="death9" class="deathBtn">Orange</button>
+        <br>
+        <img>
+        <br>
+        </div>
+    </div>
+    <div id="ending">
+        <h2>The End</h2>
+    </div>
+    <div id="gameOver">
+        <p id="swampDTx" class= "deaths">You walk to the poisonous-looking swamp and as you desperately search<br>
+        for any sort of grub, a giant green tentacle emerges from the swamp. <br>
+        It immediately grabs you as you scream in terror. <br>
+        Your last thoughts as you are dragged under is: <br>
+        "Why did I think to look for food in a poisonous swamp?"</p>
+        <p id="wolfDTx" class= "deaths">You get mauled to death by a wolf.</p>
+
+        <p id="beesDTx" class= "deaths">You get stung to death by bees.</p>
+        
+        <p id="biggerBeesDTx" class= "deaths">You get stung to death by big bees.</p>
+        
+        <p id="giganticBeesDTx" class= "deaths">You get eaten by gigantic bees.</p>
+        
+        <p id="trumpInSkinTightClothingDTx" class= "deaths">You see Trump in skin tight clothing.</p>
+        
+        <p id="lemonsDTx" class= "deaths">Lemons fling themselves at you and hit you with the force of a bullet train</p>
+
+        <p id="limesDTx" class= "deaths">You pick up a lime. It explodes.</p>
+
+        <p id="orangeDTx" class= "deaths">You are eating an orange when the juice squirts into your eyes<br>
+        You stumble backwards in pain and trip over a cactus.<br>
+        You fall and land on an anvil. When you unsteadily get up you slip<br>
+        on your own blood, and fall off a 300m cliff.</p>
+
+        <br>
+        <h2 id= "htmldeathTitle"><strong>Game Over:</strong></h2>
+        
+    </div>
+    <div id="restart">
+        <button>Restart?</button>
+
+
+<script src="JavaScript/fetch.js"></script>
+<script src="JavaScript/variables.js"></script>
+<script src="JavaScript/functions.js"></script>
+<script src="JavaScript/index.js"></script>
+</body>
+</html>
