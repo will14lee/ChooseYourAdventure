@@ -33,6 +33,9 @@ const toHide=()=>{
         p2.innerText=""
         p3.innerText=""
         p4.innerText=""
+        flavor2.innerText=""
+        flavor3.innerText=""
+        flavor4.innerText=""
 }
 
 function deadDetails(dTi){
