@@ -82,22 +82,26 @@ document.addEventListener("DOMContentLoaded", init)
 
 
 continuer(pBtn);
-const qA= (qF)=>{
-    let an1= (qF*4)
+const qA= (qF, p, ans1, ans2, ans3, ans4)=>{
+    let an1= (qF*4)+0
     let an2=(qF*4)+1
     let an3=(qF*4)+2
     let an4=(qF*4)+3
-    questionTxt(p2, qF);
+    questionTxt(p, qF);
     flavorTxt(flavor2, qF);
     answerTxt(secondBtn,an1)
     answerTxt(thirdBtn,an2)
     answerTxt(death2,an3)
     answerTxt(death3,an4)
 }
-continuer (one3, 2)
-continuer(secondChoices);
-continuer(thirdChoices);
-continuer(fourthChoices);
+continuer(one1, 0, p2, secondBtn, thirdBtn, death2, death3)
+continuer(one2,1, p2, secondBtn, thirdBtn, death2, death3)
+continuer (one3, 2, p2, secondBtn, thirdBtn, death2, death3)
+continuer(secondBtn, 3, p3, fourthBtn, death4, death5, death6)
+continuer(thirdBtn, 4, p3, fourthBtn, death4, death5, death6)
+continuer(fourthBtn, 5, p3, fourthBtn, death4, death5, death6)
+continuer(fifthBtn, 6, p4, fifthBtn, death7, death8, death9)
+
 death(instantDead);
 redo(restart);
 
