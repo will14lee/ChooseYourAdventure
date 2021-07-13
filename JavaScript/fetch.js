@@ -14,14 +14,25 @@ let flavorTxt= (flaLoc, number)=>{fetch("http://localhost:3000/questions")
 let questionTxt= (queLoc, number)=>{fetch("http://localhost:3000/questions")
 .then (response=> response.json())
 .then(response=> queLoc.innerText= response[number].question)}
-// let newQuote=[{type: "brown", size: "small"}, {type: "black", size: "large"}]
-// fetch("http://localhost:3000/end", {
-//   method: "POST",
-//   headers: {
-//     "Accept":"application/json",
-//     "Content-Type":"application/json"
-//   },
-//   body: JSON.stringify(newQuote)
-// })
-// .then(resp => resp.json())
-// .then(data=>console.log(data))
+
+const namesForTable= (number)=>{
+    fetch("http://localhost:3000/name")
+    .then(response=> response.json())
+    // .then(response=> response.length)
+    // .then(response=> console.log(response[number].name))
+    .then(response=> document.querySelector("td").innerHTML=response[number].name)
+}
+
+
+const postedName=(theName)=>{
+    let postingName={"name" : theName}
+    fetch("http://localhost:3000/name", {
+        method: "POST",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postingName)
+    })
+    console.log(postingName)
+}

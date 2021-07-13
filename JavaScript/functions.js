@@ -1,4 +1,4 @@
-function continuer(cont, qF, p, ans1, ans2, ans3, ans4){
+function continuer(cont, qF, p, flavor, ans1, ans2, ans3, ans4){
     cont.addEventListener("click", ()=>{
         if(progress===1){
                 // qA(qF, p)
@@ -40,7 +40,9 @@ function redo(cont){
         inName.value="";
         cont.style.display="none";
         progress=0;
+        restarts=1
         init();
+        createTrTd()
     })
 }
 function youDied(where, how, dis){

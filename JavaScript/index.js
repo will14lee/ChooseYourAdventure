@@ -17,6 +17,7 @@ const init=()=>{
         document.querySelectorAll("cite.name").forEach((string)=>{string.innerText=inName.value})      
         btnName.style.display= "none";
         inName.style.display= "none";
+        postedName(inName.value)
     }
     else if(progress===2){
         p1.style.display="block"
@@ -68,7 +69,9 @@ document.addEventListener("keydown", (e)=>{if(e.key==="Enter"){
         inName.value="";
         restart.style.display="none";
         progress=0;
+        restarts=1
         init();
+        createTrTd()
     }
     else if(inName.value!=="" && progress===0){
         pBtn.style.display="block", progress++, init()
@@ -82,25 +85,25 @@ document.addEventListener("DOMContentLoaded", init)
 
 
 continuer(pBtn);
-const qA= (qF, p, ans1, ans2, ans3, ans4)=>{
+const qA= (qF, p, flavor, ans1, ans2, ans3, ans4)=>{
     let an1= (qF*4)+0
     let an2=(qF*4)+1
     let an3=(qF*4)+2
     let an4=(qF*4)+3
     questionTxt(p, qF);
-    flavorTxt(flavor2, qF);
+    flavorTxt(flavor, qF);
     answerTxt(secondBtn,an1)
     answerTxt(thirdBtn,an2)
     answerTxt(death2,an3)
     answerTxt(death3,an4)
 }
-continuer(one1, 0, p2, secondBtn, thirdBtn, death2, death3)
-continuer(one2,1, p2, secondBtn, thirdBtn, death2, death3)
-continuer (one3, 2, p2, secondBtn, thirdBtn, death2, death3)
-continuer(secondBtn, 3, p3, fourthBtn, death4, death5, death6)
-continuer(thirdBtn, 4, p3, fourthBtn, death4, death5, death6)
-continuer(fourthBtn, 5, p3, fourthBtn, death4, death5, death6)
-continuer(fifthBtn, 6, p4, fifthBtn, death7, death8, death9)
+continuer(one1, 0, p2, flavor2, secondBtn, thirdBtn, death2, death3)
+continuer(one2,1, p2, flavor2, secondBtn, thirdBtn, death2, death3)
+continuer (one3, 2, p2, flavor2, secondBtn, thirdBtn, death2, death3)
+continuer(secondBtn, 3, p3, flavor3, fourthBtn, death4, death5, death6)
+continuer(thirdBtn, 4, p3, flavor3, fourthBtn, death4, death5, death6)
+continuer(fourthBtn, 5, p3, flavor3, fourthBtn, death4, death5, death6)
+continuer(fifthBtn, 6, p4, flavor4, fifthBtn, death7, death8, death9)
 
 death(instantDead);
 redo(restart);
